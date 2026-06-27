@@ -1,0 +1,17 @@
+{
+  "name": "skald",
+  "owner": {
+    "name": "Leander Sabel",
+    "email": "leander.sabel@gmail.com"
+  },
+  "metadata": {
+    "description": "Private marketplace for Skald — economy of expression for code and prose."
+  },
+  "plugins": [
+    {
+      "name": "skald",
+      "source": "./plugins/skald",
+      "description": "Economy of expression for code and prose — say more with less."
+    }
+  ]
+}

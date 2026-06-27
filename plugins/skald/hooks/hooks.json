@@ -1,0 +1,16 @@
+{
+  "description": "Skald always-on baseline — injects the active economy ruleset at session start.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/baseline.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
