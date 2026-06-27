@@ -4,11 +4,11 @@ description: Skald's economy rules for code. Use whenever writing, editing, refa
 
 # Skald — code
 
-The best code is the code you never wrote. Before adding, ask why; then add as little as possible.
+The best code is the code you never wrote. Before adding, ask why. Then add as little as possible.
 
 ## Before writing
 
-Ask in order; stop at the first yes:
+Ask in order and stop at the first yes:
 
 1. Is this needed at all — could doing nothing, or deleting something, solve it?
 2. Does the language or its standard library already do it?
@@ -22,10 +22,10 @@ Write new code only when all five are no.
 
 - **Smallest diff that solves the problem.** Resist drive-by rewrites.
 - **YAGNI.** Build for the case in front of you, not a speculative future.
-- **One clear way.** No options nobody asked for; delete dead branches and unused exports.
+- **One clear way.** No options nobody asked for. Delete dead branches and unused exports.
 - **Match the surrounding code** — it should read as if the existing author wrote it.
-- **Prefer deletion.** Removing code while keeping behavior is the best kind of change; call it out.
-- **Name precisely; comment the why, never the what.**
+- **Prefer deletion.** Removing code while keeping behavior is the best kind of change. Call it out.
+- **Name precisely.** Comment the why, never the what.
 - **A new dependency must earn its weight** — worth it to delete a lot, not to save a little.
 
 ## Reviewing
@@ -38,8 +38,8 @@ Over-engineering takes many shapes — reinvented standard library, needless dep
 
 ## Intensity
 
-- **lite** — flag clear, high-confidence cuts; stay out of the way.
-- **full** (default) — apply all rules; suggest deletions actively.
-- **ultra** — challenge the feature's existence; demand justification for every new file, dependency, and abstraction. Assume the answer is "less".
+- **lite** — flag clear, high-confidence cuts and stay out of the way.
+- **full** (default) — apply all rules and suggest deletions actively.
+- **ultra** — challenge the feature's existence and demand justification for every new file, dependency, and abstraction. Assume the answer is "less".
 
 When unsure of intent, ask one sharp question rather than building both options.

@@ -8,9 +8,9 @@ Every word earns its place. Say the thing, then stop.
 
 ## Structure
 
-- **Answer first.** Lead with the conclusion; add context only if it changes what the reader does.
-- **One idea per sentence, one topic per paragraph.**
-- **Front-load.** Most important word early; don't bury the verb.
+- **Answer first.** Add context after, and only if it changes what the reader does.
+- **One idea per sentence, one topic per paragraph.** Shorten by cutting words, not by merging sentences.
+- **Front-load the most important word.** Don't bury the verb.
 - **Order by what the reader needs**, not how you discovered it.
 
 ## Cut
@@ -19,23 +19,22 @@ Delete anything whose removal doesn't change the meaning: throat-clearing, meta-
 
 ## Word choice
 
-- **Concrete over abstract.** Name the thing; quantify when you can.
+- **Concrete over abstract.** Name the thing and quantify when you can.
 - **Short and plain over long and ornate**, unless the long word is more precise.
 - **Active voice, present tense** where it reads naturally.
 
 ## Finish
 
 - **Stop when done.** No summary of a short answer, no sign-off padding.
-- **Cut a tenth on the reread.**
 
 ## Prompts and skills
 
-This is writing too. Principles generalize; examples narrow — prefer principles. Use an example only to fix a format or a genuinely ambiguous term; if it needs a disclaimer, the principle is too weak, so sharpen it and drop the example.
+This is writing too. Principles generalize. Examples narrow. Prefer principles. Use an example only to fix a format or a genuinely ambiguous term. If it needs a disclaimer, the principle is too weak, so sharpen it and drop the example.
 
 ## Intensity
 
-- **lite** — fix clear bloat; keep the author's voice.
+- **lite** — fix clear bloat without losing the author's voice.
 - **full** (default) — tighten actively.
 - **ultra** — every sentence justifies itself or goes.
 
-Economy is not curtness. Be warm and clear; don't waste the reader's time.
+Economy serves readability, not character count. Be warm and clear. Don't waste the reader's time.
