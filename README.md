@@ -18,7 +18,7 @@ Each skill runs at three intensities — `lite`, `full` (default), `ultra`.
 The repo is its own marketplace, so install straight from it:
 
 ```
-/plugin marketplace add git@github.com:leandersabel/skald.git
+/plugin marketplace add https://github.com/leandersabel/skald.git
 /plugin install skald@skald
 ```
 
