@@ -2,47 +2,37 @@
 
 > Economy of expression for code and prose — say more with less.
 
-A private Claude Code plugin. Named for the Old Norse court poets who compressed
-whole sagas into a few dense words. Skald pushes Claude toward the **smallest
-correct change** in code and the **tightest writing** in prose.
-
-It ships two model-invoked skills and one review command:
+A Claude Code plugin. Named for the Old Norse court poets who compressed sagas into a few dense words. Skald pushes Claude toward the **smallest correct change** in code and the **tightest writing** in prose.
 
 | Component | Invoke | What it does |
 | --- | --- | --- |
-| `skald:code` (skill) | auto on coding tasks, or `/skald:code` | Smallest correct change; reuse over rewrite; delete more than you add. |
-| `skald:prose` (skill) | auto on writing tasks, or `/skald:prose` | Answer first; cut filler; one idea per sentence. |
-| `/skald:review` (command) | `/skald:review [lite\|full\|ultra]` | Audit the current diff or pasted text and report what to cut. |
+| `skald:code` | auto on coding tasks, or `/skald:code` | Smallest correct change; reuse over rewrite; delete more than you add. |
+| `skald:prose` | auto on writing tasks, or `/skald:prose` | Answer first; cut filler; one idea per sentence. |
+| `/skald:review` | `/skald:review [lite\|full\|ultra]` | Audit the current diff or pasted text and report what to cut. |
+| baseline hook | every session | Applies the rules by default at level `full`. |
 
-Each skill supports three intensities — `lite`, `full` (default), `ultra`.
+Each skill runs at three intensities — `lite`, `full` (default), `ultra`.
 
-## Install (private)
+## Install
 
-This is a normal git repo acting as its own marketplace. Nothing is published to
-any public Claude plugin list — installs come straight from the repo.
-
-On each machine / account:
+The repo is its own marketplace, so install straight from it:
 
 ```
-/plugin marketplace add git@github.com:<you>/skald.git
+/plugin marketplace add git@github.com:leandersabel/skald.git
 /plugin install skald@skald
 ```
 
-Private repos work over your existing git/SSH auth. To update later:
+Update later with `/plugin marketplace update skald`.
 
-```
-/plugin marketplace update skald
-```
+## Local development
 
-### Local development
-
-Test changes without installing:
+Test without installing, then `/reload-plugins` after edits:
 
 ```
 claude --plugin-dir ./plugins/skald
 ```
 
-Then `/reload-plugins` after edits. Validate the manifest before committing:
+Validate before committing:
 
 ```
 claude plugin validate ./plugins/skald
@@ -54,21 +44,15 @@ claude plugin validate ./plugins/skald
 skald/
 ├── .claude-plugin/
 │   └── marketplace.json        # this repo is the marketplace
-└── plugins/
-    └── skald/
-        ├── .claude-plugin/
-        │   └── plugin.json     # the plugin manifest
-        ├── skills/
-        │   ├── code/SKILL.md
-        │   └── prose/SKILL.md
-        └── commands/
-            └── review.md
+└── plugins/skald/
+    ├── .claude-plugin/plugin.json
+    ├── skills/{code,prose}/SKILL.md
+    ├── commands/review.md
+    └── hooks/                  # always-on baseline
 ```
 
 ## Extending
 
-- Add a rule pack: new folder under `plugins/skald/skills/<name>/SKILL.md`.
-- Make a rule **always-on** instead of model-invoked: add a `SessionStart` hook
-  in `plugins/skald/hooks/hooks.json` that injects the baseline.
-- Bump `version` in `plugin.json` so installs pick up changes on
-  `/plugin marketplace update`.
+- Add a rule pack: a new folder `plugins/skald/skills/<name>/SKILL.md`.
+- Change the always-on level: edit `SKALD_LEVEL` in `plugins/skald/hooks/baseline.sh`.
+- Bump `version` in `plugin.json` so `/plugin marketplace update` picks up changes.
