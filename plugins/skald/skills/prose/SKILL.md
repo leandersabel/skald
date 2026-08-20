@@ -1,4 +1,5 @@
 ---
+name: prose
 description: Skald's economy rules for writing. Use whenever drafting or editing prose — docs, code comments, commit messages, PR descriptions, chat replies, emails, summaries. Lead with the point, cut filler, one idea per sentence. Auto-apply on any writing task unless the user opts out.
 ---
 

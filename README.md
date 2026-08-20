@@ -24,6 +24,18 @@ The repo is its own marketplace, so install straight from it:
 
 Update later with `/plugin marketplace update skald`.
 
+## opencode
+
+opencode reads the same `SKILL.md` files. Symlink them into its skills directory:
+
+```
+mkdir -p ~/.config/opencode/skills
+ln -s "$(pwd)/plugins/skald/skills/code" ~/.config/opencode/skills/code
+ln -s "$(pwd)/plugins/skald/skills/prose" ~/.config/opencode/skills/prose
+```
+
+Update with `git pull`; restart opencode to reload. The `review` command and baseline hook are Claude Code only.
+
 ## Local development
 
 Test without installing, then `/reload-plugins` after edits:

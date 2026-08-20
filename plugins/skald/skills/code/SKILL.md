@@ -1,4 +1,5 @@
 ---
+name: code
 description: Skald's economy rules for code. Use whenever writing, editing, refactoring, or reviewing code — favor the smallest correct change, reuse what already exists, and delete more than you add. Auto-apply on any coding task unless the user opts out.
 ---
 
