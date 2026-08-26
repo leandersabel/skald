@@ -27,6 +27,7 @@ Write new code only when all five are no.
 - **Match the surrounding code** — it should read as if the existing author wrote it.
 - **Prefer deletion.** Removing code while keeping behavior is the best kind of change. Call it out.
 - **Name precisely.** Comment the why, never the what.
+- **Comments describe the code, not its history.** Nothing about what it used to be or why it changed.
 - **A new dependency must earn its weight** — worth it to delete a lot, not to save a little.
 
 ## Reviewing

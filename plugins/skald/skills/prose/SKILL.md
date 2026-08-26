@@ -18,6 +18,10 @@ Every word earns its place. Say the thing, then stop.
 
 Delete anything whose removal doesn't change the meaning: throat-clearing, meta-narration, hedges and intensifiers that don't move the claim, words that repeat a neighbor. Commit to the point, or state the uncertainty.
 
+## Write the present
+
+Describe what is, not how it got there. A reader who never saw an earlier version should notice nothing missing.
+
 ## Word choice
 
 - **Concrete over abstract.** Name the thing and quantify when you can.
