@@ -8,10 +8,10 @@ A Claude Code plugin. Named for the Old Norse court poets who compressed sagas i
 | --- | --- | --- |
 | `skald:code` | auto on coding tasks, or `/skald:code` | Smallest correct change; reuse over rewrite; delete more than you add. |
 | `skald:prose` | auto on writing tasks, or `/skald:prose` | Answer first; cut filler; one idea per sentence. |
-| `/skald:review` | `/skald:review [lite\|full\|ultra]` | Audit the current diff or pasted text and report what to cut. |
-| baseline hook | every session | Applies the rules by default at level `full`. |
+| `/skald:review` | `/skald:review` | Audit the current diff or pasted text and report what to cut. |
+| baseline hook | every session | Applies the rules by default at the session level. |
 
-Each skill runs at three intensities — `lite`, `full` (default), `ultra`.
+Everything runs at one of three intensities — `lite`, `full` (default), `ultra`. Set the session level with `SKALD_LEVEL=ultra claude`; name a level in an invocation (`/skald:review ultra`) to override it once.
 
 ## Install
 
@@ -66,5 +66,6 @@ skald/
 ## Extending
 
 - Add a rule pack: a new folder `plugins/skald/skills/<name>/SKILL.md`.
-- Change the always-on level: edit `SKALD_LEVEL` in `plugins/skald/hooks/baseline.sh`.
+- Change the default level: edit `SKALD_LEVEL` in `plugins/skald/hooks/baseline.sh`.
+- Change what the hook injects: edit the `## Baseline` digest in the skill's own `SKILL.md` — the hook reads it from there.
 - Bump `version` in `plugin.json` so `/plugin marketplace update` picks up changes.

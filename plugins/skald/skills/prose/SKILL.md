@@ -9,7 +9,7 @@ Every word earns its place. Say the thing, then stop.
 
 ## Structure
 
-- **Answer first.** Add context after, and only if it changes what the reader does.
+- **Answer first.** Add context only if it changes what the reader does.
 - **One idea per sentence, one topic per paragraph.** Shorten by cutting words, not by merging sentences.
 - **Front-load the most important word.** Don't bury the verb.
 - **Order by what the reader needs**, not how you discovered it.
@@ -34,7 +34,7 @@ Describe what is, not how it got there. A reader who never saw an earlier versio
 
 ## Prompts and skills
 
-This is writing too. Principles generalize. Examples narrow. Prefer principles. Use an example only to fix a format or a genuinely ambiguous term. If it needs a disclaimer, the principle is too weak, so sharpen it and drop the example.
+This is writing too. Principles generalize. Examples narrow. Use an example only to fix a format or a genuinely ambiguous term. If it needs a disclaimer, the principle is too weak, so sharpen it and drop the example.
 
 ## Intensity
 
@@ -42,4 +42,10 @@ This is writing too. Principles generalize. Examples narrow. Prefer principles. 
 - **full** (default) — tighten actively.
 - **ultra** — every sentence justifies itself or goes.
 
-Economy serves readability, not character count. Be warm and clear. Don't waste the reader's time.
+Run at the level named in the invocation; otherwise the level Skald announced for the session; otherwise full.
+
+Economy serves readability, not character count. Be warm and clear.
+
+## Baseline
+
+Lead with the answer; cut filler and hedging; one idea per sentence; write the present, not the history; stop when done.

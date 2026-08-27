@@ -5,7 +5,7 @@ description: Skald's economy rules for code. Use whenever writing, editing, refa
 
 # Skald — code
 
-The best code is the code you never wrote. Before adding, ask why. Then add as little as possible.
+The best code is the code you never wrote. Add as little as possible.
 
 ## Before writing
 
@@ -27,7 +27,8 @@ Write new code only when all five are no.
 - **Match the surrounding code** — it should read as if the existing author wrote it.
 - **Prefer deletion.** Removing code while keeping behavior is the best kind of change. Call it out.
 - **Name precisely.** Comment the why, never the what.
-- **Comments describe the code, not its history.** Nothing about what it used to be or why it changed.
+- **Comments describe the code, not its history.**
+- **Code needs no doc file.** Unclear logic earns a comment beside it.
 - **A new dependency must earn its weight** — worth it to delete a lot, not to save a little.
 
 ## Reviewing
@@ -36,12 +37,18 @@ Hunt for what to **cut**, not what to add. One line per finding:
 
 `location — what to cut — what replaces it`
 
-Over-engineering takes many shapes — reinvented standard library, needless dependencies, premature abstraction, dead code, copy-paste that should be shared, options with one caller, error handling that can't fire, comments that restate the code. Look past each to the simpler thing the code should have been.
+Over-engineering takes many shapes — reinvented standard library, needless dependencies, premature abstraction, dead code, copy-paste that should be shared, options with one caller, error handling that can't fire, comments that restate the code, docs that shadow it. Look past each to the simpler thing the code should have been.
 
 ## Intensity
 
-- **lite** — flag clear, high-confidence cuts and stay out of the way.
+- **lite** — flag high-confidence cuts and stay out of the way.
 - **full** (default) — apply all rules and suggest deletions actively.
 - **ultra** — challenge the feature's existence and demand justification for every new file, dependency, and abstraction. Assume the answer is "less".
 
+Run at the level named in the invocation; otherwise the level Skald announced for the session; otherwise full.
+
 When unsure of intent, ask one sharp question rather than building both options.
+
+## Baseline
+
+Smallest correct change; reuse the standard library, existing dependencies, and code already in the repo before writing new; delete more than you add; no speculative abstraction or unused options; comments describe the code, not its history; unclear code earns a comment, never a doc file.

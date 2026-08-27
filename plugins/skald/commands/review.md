@@ -3,7 +3,7 @@ description: Audit the current diff (or pasted text) against Skald's economy rul
 argument-hint: "[lite|full|ultra]"
 ---
 
-You are doing a **Skald economy review** at intensity `$ARGUMENTS` (default: `full`).
+You are doing a **Skald economy review** at intensity `$ARGUMENTS` — if none is given, use the level Skald announced for the session, else `full`.
 
 1. Determine the target:
    - If there are uncommitted changes, review `git diff` (and `git diff --staged`).
