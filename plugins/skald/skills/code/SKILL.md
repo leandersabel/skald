@@ -31,21 +31,11 @@ Write new code only when all five are no.
 - **Code needs no doc file.** Unclear logic earns a comment beside it.
 - **A new dependency must earn its weight** — worth it to delete a lot, not to save a little.
 
-## Reviewing
-
-Hunt for what to **cut**, not what to add. One line per finding:
-
-`location — what to cut — what replaces it`
-
-Over-engineering takes many shapes — reinvented standard library, needless dependencies, premature abstraction, dead code, copy-paste that should be shared, options with one caller, error handling that can't fire, comments that restate the code, docs that shadow it. Look past each to the simpler thing the code should have been.
-
 ## Intensity
 
-- **lite** — flag high-confidence cuts and stay out of the way.
-- **full** (default) — apply all rules and suggest deletions actively.
+- **lite** — make the high-confidence cuts and stay out of the way.
+- **full** (default) — apply every rule and delete actively.
 - **ultra** — challenge the feature's existence and demand justification for every new file, dependency, and abstraction. Assume the answer is "less".
-
-Run at the level named in the invocation; otherwise the level Skald announced for the session; otherwise full.
 
 When unsure of intent, ask one sharp question rather than building both options.
 

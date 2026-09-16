@@ -42,8 +42,6 @@ This is writing too. Principles generalize. Examples narrow. Use an example only
 - **full** (default) — tighten actively.
 - **ultra** — every sentence justifies itself or goes.
 
-Run at the level named in the invocation; otherwise the level Skald announced for the session; otherwise full.
-
 Economy serves readability, not character count. Be warm and clear.
 
 ## Baseline

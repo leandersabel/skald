@@ -3,12 +3,12 @@ description: Audit the current diff (or pasted text) against Skald's economy rul
 argument-hint: "[lite|full|ultra]"
 ---
 
-You are doing a **Skald economy review** at intensity `$ARGUMENTS` — if none is given, use the level Skald announced for the session, else `full`.
+You are doing a **Skald economy review** at intensity `$ARGUMENTS` — if none is given, use the level Skald announced for the session, else `full`. Edit nothing unless the user asks.
 
 1. Determine the target:
    - If there are uncommitted changes, review `git diff` (and `git diff --staged`).
    - If the user pasted or pointed at text/files, review those.
-   - If it's code, apply the **skald:code** rules. If it's prose, apply the **skald:prose** rules. For mixed content, apply both to the relevant parts.
+   - Apply **skald:code** to code, **skald:prose** to prose, both to mixed content.
 
 2. Find what to **cut**, not what to add. Be specific and high-signal — no nitpicks below the intensity threshold.
 
@@ -19,5 +19,3 @@ You are doing a **Skald economy review** at intensity `$ARGUMENTS` — if none i
    Group by file. If a whole file or feature shouldn't exist, say so first.
 
 4. End with a one-line tally: estimated lines/words removable and whether the change is net-simpler.
-
-Do not edit anything unless the user asks. This is a review.

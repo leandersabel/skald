@@ -10,7 +10,7 @@ digest() {
 }
 
 cat <<EOF
-Skald is active at level **${SKALD_LEVEL}**. Apply economy by default to everything you produce this session, without being asked:
+Skald is active at level **${SKALD_LEVEL}**. Apply economy by default to everything you produce this session:
 
 - Code: $(digest code) (Full rules: the skald:code skill.)
 - Prose: $(digest prose) (Full rules: the skald:prose skill.)
