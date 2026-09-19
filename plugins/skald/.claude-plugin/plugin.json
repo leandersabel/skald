@@ -1,7 +1,7 @@
 {
   "name": "skald",
   "description": "Economy of expression for code and prose — say more with less.",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "author": {
     "name": "Leander Sabel",
     "email": "leander.sabel@gmail.com"

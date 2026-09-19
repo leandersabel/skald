@@ -9,7 +9,7 @@ A Claude Code plugin. Named for the Old Norse court poets who compressed sagas i
 | `skald:code` | auto on coding tasks, or `/skald:code` | Smallest correct change; reuse over rewrite; delete more than you add. |
 | `skald:prose` | auto on writing tasks, or `/skald:prose` | Answer first; cut filler; one idea per sentence. |
 | `skald:review` | `/skald:review` | Audit the current diff or pasted text and report what to cut. |
-| `skald:all` | `/skald:all` | Audit every tracked file in the project and report what to cut. |
+| `skald:all` | `/skald:all` | Apply both rule packs to every tracked file in the project, cutting as it goes. |
 | baseline hook | every session | Applies the rules by default at the session level. |
 
 Everything runs at one of three intensities — `lite`, `full` (default), `ultra`. Set the session level with `SKALD_LEVEL=ultra claude`. Name a level in an invocation (`/skald:review ultra`) to override it once.
